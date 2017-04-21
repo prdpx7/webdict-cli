@@ -1,8 +1,13 @@
 {
   "name": "webdict-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Search dictionary.com and urbandictionary from CLI",
-  "main": "webdict.js",
+  "files": [
+    "webdict.js"
+  ],
+  "bin": {
+    "webdict": "webdict.js"
+  },
   "scripts": {
     "test": "standard && ava"
   },
