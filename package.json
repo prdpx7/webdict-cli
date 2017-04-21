@@ -1,0 +1,34 @@
+{
+  "name": "webdict-cli",
+  "version": "0.1.0",
+  "description": "Search dictionary.com and urbandictionary from CLI",
+  "main": "webdict.js",
+  "scripts": {
+    "test": "standard && ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zuck007/webdict-cli.git"
+  },
+  "keywords": [
+    "dictionary",
+    "cli",
+    "unix",
+    "urbandictionary"
+  ],
+  "author": "Pradeep Khileri <pradeepchoudhary009@gmail.com> (https://zuck007.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zuck007/webdict-cli/issues"
+  },
+  "homepage": "https://github.com/zuck007/webdict-cli#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "webdict": "^0.1.0"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "standard": "^10.0.2"
+  }
+}
