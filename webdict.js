@@ -8,6 +8,7 @@ const pkgversion = require('./package.json').version
 function fetchDefinition (site, word) {
   webdict(site, word)
         .then(resp => {
+          console.log(chalk.bold('-----------------'))
           if (resp.message === 'success') {
             console.log(chalk.bold('Type: ') + chalk.green(resp.type))
             console.log(chalk.bold('Source: ') + chalk.green(resp.source))
@@ -15,7 +16,6 @@ function fetchDefinition (site, word) {
               console.log(chalk.bold('Definition', idx + 1) + ':\n' + chalk.green(val))
             })
           } else {
-            console.log(chalk.bold('-----------------'))
             console.log(chalk.bold('From: ') + chalk.green(resp.source))
             console.log(chalk.bold('Message: ') + chalk.red(`${resp.message}`))
           }
