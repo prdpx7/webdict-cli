@@ -30,7 +30,7 @@
   "dependencies": {
     "chalk": "^1.1.3",
     "commander": "^2.9.0",
-    "webdict": "^0.1.0"
+    "webdict": "^0.2.1"
   },
   "devDependencies": {
     "ava": "^0.19.1",
