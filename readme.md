@@ -2,8 +2,8 @@
 
 > search dictionary.com and urbandictionary from CLI
 
-[![Build Status](https://travis-ci.org/zuck007/webdict-cli.svg?branch=master)](https://travis-ci.org/zuck007/webdict-cli) 
-[![MITlicensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/zuck007/webdict-cli/master/LICENSE)
+[![Build Status](https://travis-ci.org/prdpx7/webdict-cli.svg?branch=master)](https://travis-ci.org/prdpx7/webdict-cli) 
+[![MITlicensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/prdpx7/webdict-cli/master/LICENSE)
 
 ## Install
 ```
