@@ -1,6 +1,6 @@
 {
   "name": "webdict-cli",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "Search dictionary.com and urbandictionary from CLI",
   "files": [
     "webdict.js"
