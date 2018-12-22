@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict'
+// const webdict = require('../webdict')
 const webdict = require('webdict')
 const program = require('commander')
 const chalk = require('chalk')
