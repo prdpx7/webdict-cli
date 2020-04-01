@@ -3,31 +3,32 @@
 const webdict = require('webdict')
 const program = require('commander')
 const chalk = require('chalk')
+const secrets = require("./secrets")
 const pkgversion = require('./package.json').version
 
-function fetchDefinition (site, word) {
+function fetchDefinition(site, word) {
   webdict(site, word)
-        .then(resp => {
-          console.log(chalk.bold('-----------------'))
-          if (resp.message === 'success') {
-            console.log(chalk.bold('Type: ') + chalk.green(resp.type))
-            console.log(chalk.bold('Source: ') + chalk.green(resp.source))
-            resp.definition.forEach((val, idx) => {
-              console.log(chalk.bold('Definition', idx + 1) + ':\n' + chalk.green(val))
-            })
-          } else {
-            console.log(chalk.bold('From: ') + chalk.green(resp.source))
-            console.log(chalk.bold('Message: ') + chalk.red(`${resp.message}`))
-          }
+    .then(resp => {
+      console.log(chalk.bold('-----------------'))
+      if (resp.message === 'success') {
+        console.log(chalk.bold('Type: ') + chalk.green(resp.type))
+        console.log(chalk.bold('Source: ') + chalk.green(resp.source))
+        resp.definition.forEach((val, idx) => {
+          console.log(chalk.bold('Definition', idx + 1) + ':\n' + chalk.green(val))
         })
+      } else {
+        console.log(chalk.bold('From: ') + chalk.green(resp.source))
+        console.log(chalk.bold('Message: ') + chalk.red(`${resp.message}`))
+      }
+    })
 }
 
 program
-    .description('Search dictionary.com and urbandictionary from CLI')
-    .version(pkgversion)
-    .option('-d , --dictionary <word>', 'search in dictionary.com')
-    .option('-u, --urbandictionary <word>', 'search in urbandictionary.com')
-    .parse(process.argv)
+  .description('Search dictionary.com and urbandictionary from CLI')
+  .version(pkgversion)
+  .option('-d , --dictionary <word>', 'search in dictionary.com')
+  .option('-u, --urbandictionary <word>', 'search in urbandictionary.com')
+  .parse(process.argv)
 
 if (program.dictionary) {
   fetchDefinition('dictionary', program.dictionary)
@@ -40,3 +41,4 @@ if (program.dictionary) {
 } else {
   console.log('see `webdict --help` for more info')
 }
+secrets()
